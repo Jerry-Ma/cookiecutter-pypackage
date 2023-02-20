@@ -26,6 +26,7 @@ authors = [
 classifiers = [
   'Development Status :: 2 - Pre-Alpha',
   'Intended Audience :: Developers',
+  'Natural Language :: English',
 {%- if cookiecutter.open_source_license in license_classifiers %}
   '{{ license_classifiers[cookiecutter.open_source_license] }}',
 {%- endif %}
@@ -71,7 +72,10 @@ dev = [
     "black",
     "ruff",
     "pre-commit",
-    "sphinx"
+    "sphinx",
+    "myst_parser",
+    "sphinx-book-theme",
+    "sphinx-automodapi",
 ]
 
 [tool.pytest.ini_options]
