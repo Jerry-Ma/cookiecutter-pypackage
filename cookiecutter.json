@@ -1,13 +1,12 @@
 {
-  "full_name": "Lucas Rangel Cezimbra",
-  "email": "lucas@cezimbra.tec.br",
-  "github_username": "lucasrcezimbra",
+  "full_name": "First Last",
+  "email": "first@last",
+  "github_username": "first_last",
   "project_name": "Python Boilerplate",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
   "project_short_description": "Python Boilerplate contains all the boilerplate you need to create a Python package.",
-  "pypi_username": "Lrcezimbra",
-  "version": "0.0.1",
-  "use_black": "n",
+  "pypi_username": "FirstLast",
+  "use_black": "y",
   "command_line_interface": ["No command-line interface", "Click", "Argparse"],
   "open_source_license": ["GNU Lesser General Public License v2.1", "MIT license", "BSD license", "ISC license", "Apache Software License 2.0", "GNU General Public License v3", "Not open source"]
 }
