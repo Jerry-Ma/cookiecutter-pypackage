@@ -1,0 +1,16 @@
+# {{ cookiecutter.project_name }}
+
+> {{ cookiecutter.project_short_description }}
+
+## Documentation
+
+- [README](README.md): Quick start guide, installation, and basic usage
+- [Project Configuration](pyproject.toml): Package metadata, dependencies, and tool configuration
+
+## Core API
+
+- [Package](src/{{cookiecutter.project_slug}}/__init__.py): Main package exports
+
+## Development
+
+- [Justfile](justfile): Task automation for development, testing, and quality assurance

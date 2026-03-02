@@ -1,62 +1,51 @@
 # {{ cookiecutter.project_name }}
 
-![PyPI version](https://img.shields.io/pypi/v/{{ cookiecutter.pypi_package_name }}.svg)
-
 {{ cookiecutter.project_short_description }}
 
-* Created by **[{{ cookiecutter.full_name }}]({{ cookiecutter.author_website if cookiecutter.author_website else 'https://github.com/' + cookiecutter.github_username }})**
-{%- if cookiecutter.author_website %}
-  * GitHub: https://github.com/{{ cookiecutter.github_username }}
-{%- endif %}
-  * PyPI: https://pypi.org/user/{{ cookiecutter.pypi_username }}/
-* PyPI package: https://pypi.org/project/{{ cookiecutter.pypi_package_name }}/
-* Free software: MIT License
+[![Python](https://img.shields.io/badge/python-3.13+-blue.svg)](https://www.python.org/downloads/)
+[![License](https://img.shields.io/badge/license-BSD--3--Clause-green.svg)](https://github.com/{{cookiecutter.__gh_slug}}/blob/master/LICENSE)
 
-## Features
+## Requirements
 
-* TODO
+- **Python**: 3.13+
 
-## Documentation
+## Installation
 
-Documentation is built with [Zensical](https://zensical.org/) and deployed to GitHub Pages.
+### From Source (Development)
 
-* **Live site:** https://{{ cookiecutter.github_username }}.github.io/{{ cookiecutter.project_slug }}/
-* **Preview locally:** `just docs-serve` (serves at http://localhost:8000)
-* **Build:** `just docs-build`
+```bash
+git clone https://github.com/{{cookiecutter.__gh_slug}}.git
+cd {{cookiecutter.pypi_package_name}}
 
-API documentation is auto-generated from docstrings using [mkdocstrings](https://mkdocstrings.github.io/).
+# Install with uv (recommended)
+uv pip install -e .
 
-Docs deploy automatically on push to `main` via GitHub Actions. To enable this, go to your repo's Settings > Pages and set the source to **GitHub Actions**.
+# Or with pip
+pip install -e .
+```
+
+## Quick Start
+
+```python
+from {{cookiecutter.project_slug}} import ...
+```
 
 ## Development
 
-To set up for local development:
-
 ```bash
-# Clone your fork
-git clone git@github.com:your_username/{{ cookiecutter.pypi_package_name }}.git
-cd {{ cookiecutter.pypi_package_name }}
-
-# Install in editable mode with live updates
-uv tool install --editable .
+just install    # Install dependencies and pre-commit hooks
+just qa         # Format, lint, type check, and test
+just coverage   # Run tests with coverage report
+just build      # Build package
+just doc        # Build and serve documentation locally
+just clean      # Clean build artifacts
 ```
 
-This installs the CLI globally but with live updates - any changes you make to the source code are immediately available when you run `{{ cookiecutter.project_slug }}`.
+## License
 
-Run tests:
+BSD 3-Clause License — see [LICENSE](https://github.com/{{cookiecutter.__gh_slug}}/blob/master/LICENSE)
 
-```bash
-uv run pytest
-```
+## Links
 
-Run quality checks (format, lint, type check, test):
-
-```bash
-just qa
-```
-
-## Author
-
-{{ cookiecutter.project_name }} was created in {% now 'local', '%Y' %} by {{ cookiecutter.full_name }}.
-
-Built with [Cookiecutter](https://github.com/cookiecutter/cookiecutter) and the [audreyfeldroy/cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage) project template.
+- **GitHub**: https://github.com/{{cookiecutter.__gh_slug}}
+- **Issues**: https://github.com/{{cookiecutter.__gh_slug}}/issues
