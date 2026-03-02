@@ -62,3 +62,12 @@ doc:
 # Deploy docs to GitHub Pages
 doc-deploy: doc-build
     uv run --group docs ghp-import docs/_build/html -r origin -b gh-pages --push --no-jekyll
+
+# Check if project is up to date with the template
+# NOTE: --checkout must be passed explicitly; cruft does not read it from .cruft.json (upstream issue)
+cruft-check:
+    uvx cruft check --checkout v2026
+
+# Update project from the template
+cruft-update:
+    uvx cruft update --checkout v2026
